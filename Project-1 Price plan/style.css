@@ -110,3 +110,23 @@ body{
 .pricing_table .pt_item.active button:hover{
     background: #1d8d42;
 }
+
+.pricing_table .pt_item.active .icon{
+    position: absolute;
+    top: -35px;
+    right: -35px;
+    border: 35px solid;
+    border-color: transparent transparent transparent #1d8d42;
+    transform: rotate(-45deg);
+}
+
+.pricing_table .pt_item.active .icon .i{
+    color: #fff;
+    position: absolute;
+    bottom: -5px;
+    right: 15px;
+}
+
+.pricing_table .pt_item.active{
+    transform: scale(1.05);
+}
