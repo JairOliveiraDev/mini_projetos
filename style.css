@@ -12,8 +12,7 @@
 body{
     background: linear-gradient(to right, #eecda3, #ef629f);
     color:black;
-    max-width: 100vw;
-    min-width: 620px;
+    width: 100%;
 }
 
 ul li a{
@@ -47,7 +46,7 @@ ul li a{
 ul.menu,
 ul.social_items{
     display: flex;
-    margin: 0 1px;
+    margin: 0 5px;
 }
 
 .navbar .logo{
@@ -62,10 +61,18 @@ ul.social_items{
 }
 
 .navbar ul.menu a{
-    margin: 0 5px;
+    margin: 0 2px;
+    padding: 10px 5px;
     width: 100%;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
     transition: all 0.2s ease;
+}
+
+.navbar.navbar_1 ul.menu a:hover{
+    background: #202020;
+    color: #fff;
+    border-radius: 3px;
+
 }
