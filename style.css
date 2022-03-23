@@ -8,3 +8,50 @@
     list-style: none;
     text-decoration: none;
 }
+
+body{
+    background: linear-gradient(to right, #eecda3, #ef629f);
+    color:black;
+}
+
+ul li a{
+    display: block;
+    color: #505978;
+}
+
+.wrapper{
+    max-width: 90vw;
+
+}
+.navbar{
+    width: 90%;
+    height: 60px;
+    background: #fff;
+    margin: 80px auto;
+    padding: 0 50px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 600px;
+}
+
+.fab{
+    margin: 0 5px;
+    color:aqua;
+}
+
+ul.menu,
+ul.social_items{
+    display: flex;
+}
+
+.navbar ul.menu a{
+    margin: 0 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
