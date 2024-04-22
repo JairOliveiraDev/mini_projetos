@@ -1,79 +1,82 @@
 //capiturar o evento submit do formulario
-const formulario = document.querySelector('#formulario');
+const formulario = document.querySelector("#formulario");
 
-formulario.addEventListener('submit', function (e) {
-    e.preventDefault();
-    const inputPeso = e.target.querySelector('#peso');
-    const inputAltura = e.target.querySelector('#altura');
+formulario.addEventListener("submit", function (e) {
+  e.preventDefault();
+  const inputPeso = e.target.querySelector("#peso");
+  const inputAltura = e.target.querySelector("#altura");
 
-    const peso = Number(inputPeso.value);
-    const altura = Number(inputAltura.value);
+  const peso = Number(inputPeso.value);
+  const altura = Number(inputAltura.value);
 
-    if (!peso) {
-        setResultado('Peso inválido', false);
-        return;
-    }
+  if (!peso) {
+    setResultado("Peso inválido", false);
+    return;
+  }
 
-    if (!altura) {
-        setResultado('Altura inválida', false);
-        return;
-    }
+  if (!altura) {
+    setResultado("Altura inválida", false);
+    return;
+  }
 
-    const imc = getImc(peso, altura);
-    const nivelImc = getNivelImc(imc);
+  const imc = getImc(peso, altura);
+  const nivelImc = getNivelImc(imc);
 
-    const msg = `seu IMC é ${imc} (${nivelImc}).`;
-    setResultado(msg, true);
-    
+  const msg = `seu IMC é ${imc} (${nivelImc}).`;
+  setResultado(msg, true);
 });
 
 function getNivelImc(imc) {
-    const nivel = ['Abaixo do peso', 'Peso normal', 'Sobre peso',
-     'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+  const nivel = [
+    "Abaixo do peso",
+    "Peso normal",
+    "Sobre peso",
+    "Obesidade grau 1",
+    "Obesidade grau 2",
+    "Obesidade grau 3",
+  ];
 
-     if (imc >= 39.9) {
-         return nivel[5];
-     }
+  if (imc >= 39.9) {
+    return nivel[5];
+  }
 
-     if (imc >= 34.9) {
-        return nivel[4];
-     }
-     
-     if (imc >= 29.9) {
-        return nivel[3];
-     }
-     
-     if (imc >= 24.9) {
-        return nivel[2];
-     }
-     
-     if (imc >= 18.5) {
-        return nivel[1];
-     }
-     
-     if (imc < 18.5);
+  if (imc >= 34.9) {
+    return nivel[4];
+  }
+
+  if (imc >= 29.9) {
+    return nivel[3];
+  }
+
+  if (imc >= 24.9) {
+    return nivel[2];
+  }
+
+  if (imc >= 18.5) {
+    return nivel[1];
+  }
+
+  if (imc < 18.5);
 }
 
 function getImc(peso, altura) {
-    const imc = peso / altura ** 2;
-    return imc.toFixed(2);
+  const imc = peso / altura ** 2;
+  return imc.toFixed(2);
 }
 
 function criaP(className) {
-    const p = document.createElement('p');
-    return p;
+  const p = document.createElement("p");
+  return p;
 }
 
 function setResultado(msg, isValid) {
-    const resultado = document.querySelector('#resultado');
-    resultado.innerHTML = '';
+  const resultado = document.querySelector("#resultado");
+  resultado.innerHTML = "";
 
-    const p = criaP();
+  const p = criaP();
 
-    //if (isValid) p.classList.add('#resultado');
+  //if (isValid) p.classList.add('#resultado');
 
-    p.innerHTML = msg;
-    resultado.appendChild(p);
+  p.innerHTML = msg;
+  resultado.appendChild(p);
 }
-
-
