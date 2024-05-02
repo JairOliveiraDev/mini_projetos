@@ -90,6 +90,17 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+  font-size: 13px;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  color: thistle;
+}
+footer .copyright a {
+  color: white;
+  text-decoration: none;
+  margin-left: 5px;
 }
 /*
 @media only screen and (max-width: 1099px) {
